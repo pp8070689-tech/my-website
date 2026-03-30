@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indira Enterprises – Premium Printing Services in Bengaluru</title>
+  <meta name="description" content="Indira Enterprises offers premium visiting card printing, offset printing, and digital printing services in Bengaluru. High quality, fast turnaround, competitive pricing." />
+  <meta name="keywords" content="printing services in Bengaluru, visiting card printing Bengaluru, offset printing Bengaluru, digital printing Bengaluru, business card printing, Indira Enterprises" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:      #0f1014;
+      --deep:     #1a1d24;
+      --gold:     #c9952a;
+      --gold-lt:  #e8b84b;
+      --cream:    #f7f3ec;
+      --warm:     #ede8df;
+      --muted:    #6b6760;
+      --white:    #ffffff;
+      --radius:   6px;
+      --shadow:   0 8px 40px rgba(0,0,0,.12);
+      /* Premium accent palette */
+      --royal:    #4f46e5;
+      --royal-lt: #818cf8;
+      --teal:     #0d9488;
+      --teal-lt:  #2dd4bf;
+      --rose:     #e11d48;
+      --rose-lt:  #fb7185;
+      --emerald:  #059669;
+      --purple:   #7c3aed;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 600;
+      cursor: pointer; border: none; text-decoration: none;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+    .btn-gold  { background: var(--gold); color: var(--white); }
+    .btn-gold:hover { background: var(--gold-lt); }
+    .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--white); }
+    .btn-dark  { background: var(--ink); color: var(--white); }
+    .btn-dark:hover { background: #2a2d35; }
+    .btn-wa    { background: #25D366; color: var(--white); }
+    .btn-wa:hover { background: #1da851; }
+    .section-label {
+      font-size: .78rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px;
+    }
+    h2.section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2; color: var(--ink); margin-bottom: 16px;
+    }
+    .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 580px; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,243,236,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,149,42,.2);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px; max-width: 1160px; margin: 0 auto;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .logo-mark {
+      width: 42px; height: 42px; background: var(--gold);
+      border-radius: 4px; display: grid; place-items: center;
+      font-family: 'Playfair Display', serif; font-size: 1.3rem;
+      color: var(--white); font-weight: 900; flex-shrink: 0;
+    }
+    .logo-text { line-height: 1.1; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--ink); font-weight: 700; }
+    .logo-tag  { font-size: .72rem; color: var(--muted); letter-spacing: .08em; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: .92rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { padding: 10px 22px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s; }
+    #mob-menu { display: none; background: var(--white); padding: 24px; border-top: 1px solid var(--warm); }
+    #mob-menu.open { display: block; }
+    #mob-menu a { display: block; padding: 10px 0; font-weight: 500; text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--warm); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--ink);
+      position: relative; overflow: hidden;
+      padding: 100px 24px 110px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 60px,
+        rgba(201,149,42,.04) 60px,
+        rgba(201,149,42,.04) 61px
+      );
+    }
+    .hero-accent {
+      position: absolute; right: -60px; top: -60px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(201,149,42,.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,149,42,.15); border: 1px solid rgba(201,149,42,.35);
+      padding: 6px 16px; border-radius: 40px; margin-bottom: 24px;
+      font-size: .8rem; color: var(--gold-lt); font-weight: 600; letter-spacing: .1em;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5vw, 3.8rem); line-height: 1.1;
+      color: var(--white); margin-bottom: 20px; font-weight: 900;
+    }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub { color: #b0aaa0; font-size: 1.1rem; margin-bottom: 36px; max-width: 460px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 48px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); font-weight: 700; }
+    .stat-label { font-size: .8rem; color: #888; letter-spacing: .06em; }
+
+    .hero-visual {
+      display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
+    }
+    .card-mock {
+      background: linear-gradient(135deg, #1e2230, #252a38);
+      border: 1px solid rgba(201,149,42,.3);
+      border-radius: 12px; padding: 28px 32px;
+      width: 100%; max-width: 340px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      position: relative; overflow: hidden;
+    }
+    .card-mock::after {
+      content: '';
+      position: absolute; right: -20px; top: -20px;
+      width: 100px; height: 100px;
+      background: radial-gradient(circle, rgba(201,149,42,.3), transparent 70%);
+      border-radius: 50%;
+    }
+    .card-mock-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .card-mock-name { color: var(--white); font-weight: 600; font-size: .95rem; margin-bottom: 4px; }
+    .card-mock-role { color: #888; font-size: .78rem; margin-bottom: 16px; }
+    .card-mock-divider { height: 1px; background: rgba(201,149,42,.2); margin: 12px 0; }
+    .card-mock-info { color: #aaa; font-size: .75rem; line-height: 1.8; }
+
+    .print-strip {
+      background: rgba(201,149,42,.1); border: 1px solid rgba(201,149,42,.2);
+      border-radius: 8px; padding: 14px 20px;
+      display: flex; align-items: center; gap: 12px;
+      max-width: 340px; width: 100%;
+    }
+    .print-dot { width: 10px; height: 10px; background: var(--gold); border-radius: 50%; flex-shrink: 0; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+    .print-text { color: #ccc; font-size: .82rem; }
+    .print-text strong { color: var(--gold-lt); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--warm);
+      padding: 20px 24px;
+    }
+    .trust-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: .88rem; font-weight: 500; }
+    .trust-icon { font-size: 1.2rem; }
+
+    /* ── SERVICES ── */
+    .services { padding: 90px 24px; }
+    .services-header { text-align: center; margin-bottom: 60px; }
+    .services-header .section-sub { margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .service-card {
+      background: var(--white);
+      border-radius: 12px; padding: 40px 32px;
+      border: 1px solid var(--warm);
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      background: var(--gold); transform: scaleY(0); transition: transform .3s;
+      transform-origin: bottom;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(201,149,42,.3); }
+    .service-card:hover::before { transform: scaleY(1); }
+    .service-icon {
+      width: 56px; height: 56px;
+      background: rgba(201,149,42,.1); border-radius: 10px;
+      display: grid; place-items: center; font-size: 1.6rem; margin-bottom: 24px;
+    }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 12px;
+    }
+    .service-card p { color: var(--muted); font-size: .92rem; margin-bottom: 20px; }
+    .service-features { list-style: none; margin-bottom: 28px; }
+    .service-features li {
+      font-size: .87rem; color: var(--ink); padding: 5px 0;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .service-features li::before { content: '✓'; color: var(--gold); font-weight: 700; }
+    .service-link {
+      color: var(--gold); font-weight: 600; font-size: .88rem;
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .service-link:hover { gap: 10px; }
+
+    /* ── ABOUT ── */
+    .about { background: var(--deep); padding: 90px 24px; }
+    .about-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-visual { position: relative; }
+    .about-img-box {
+      background: linear-gradient(135deg, #1e2230, #252a38);
+      border-radius: 16px; padding: 48px 40px;
+      border: 1px solid rgba(201,149,42,.25);
+    }
+    .about-quote {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem;
+      color: var(--white); line-height: 1.5; margin-bottom: 24px;
+    }
+    .about-quote span { color: var(--gold); }
+    .about-meta { color: #888; font-size: .82rem; }
+    .about-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--gold); color: var(--white);
+      border-radius: 12px; padding: 18px 22px; text-align: center;
+      box-shadow: 0 8px 30px rgba(201,149,42,.4);
+    }
+    .badge-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; display: block; }
+    .badge-txt { font-size: .75rem; font-weight: 600; }
+    .about-content .section-label { color: var(--gold); }
+    .about-content h2 { color: var(--white); margin-bottom: 20px; }
+    .about-content p { color: #a8a29e; margin-bottom: 20px; }
+    .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .value-item {
+      background: rgba(255,255,255,.05); border-radius: 10px; padding: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .value-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .value-title { color: var(--white); font-weight: 600; font-size: .9rem; margin-bottom: 4px; }
+    .value-desc  { color: #888; font-size: .8rem; }
+
+    /* ── WHY US ── */
+    .why-us { padding: 90px 24px; background: var(--white); }
+    .why-inner { max-width: 1160px; margin: 0 auto; }
+    .why-header { text-align: center; margin-bottom: 60px; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .why-card {
+      text-align: center; padding: 36px 24px;
+      border-radius: 12px; background: var(--cream);
+      border: 1px solid var(--warm);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .why-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 8px; }
+    .why-card p { color: var(--muted); font-size: .85rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 90px 24px; background: var(--cream); }
+    .testi-header { text-align: center; margin-bottom: 60px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1160px; margin: 0 auto; }
+    .testi-card {
+      background: var(--white); border-radius: 12px; padding: 32px 28px;
+      border: 1px solid var(--warm); position: relative;
+    }
+    .testi-stars { color: var(--gold); font-size: 1rem; margin-bottom: 16px; letter-spacing: 3px; }
+    .testi-text { color: var(--ink); font-size: .93rem; line-height: 1.75; margin-bottom: 24px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold); display: grid; place-items: center;
+      font-weight: 700; color: var(--white); font-size: .95rem; flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; font-size: .9rem; }
+    .testi-role { font-size: .78rem; color: var(--muted); }
+    .quote-mark {
+      position: absolute; top: 20px; right: 24px;
+      font-size: 4rem; color: rgba(201,149,42,.1);
+      font-family: 'Playfair Display', serif; line-height: 1;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner { background: var(--gold); padding: 70px 24px; text-align: center; }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--white); margin-bottom: 14px;
+    }
+    .cta-banner p { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-bottom: 36px; }
+    .cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-white { background: var(--white); color: var(--gold); }
+    .btn-white:hover { background: var(--cream); }
+
+    /* ── CONTACT ── */
+    .contact { padding: 90px 24px; background: var(--white); }
+    .contact-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; }
+    .contact-info h2 { margin-bottom: 20px; }
+    .contact-info p { color: var(--muted); margin-bottom: 32px; }
+    .contact-details { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-icon {
+      width: 44px; height: 44px; background: rgba(201,149,42,.1);
+      border-radius: 8px; display: grid; place-items: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-item-text a { color: var(--ink); text-decoration: none; font-weight: 500; }
+    .contact-item-text a:hover { color: var(--gold); }
+    .contact-item-label { font-size: .75rem; color: var(--muted); margin-bottom: 2px; }
+    .contact-form { background: var(--cream); border-radius: 16px; padding: 40px 36px; border: 1px solid var(--warm); }
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 24px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; margin-bottom: 18px; }
+    .form-group label { font-size: .82rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 12px 16px; border: 1px solid #ddd; border-radius: var(--radius);
+      font-family: 'DM Sans', sans-serif; font-size: .9rem; background: var(--white);
+      transition: border-color .2s, box-shadow .2s; resize: vertical;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,149,42,.15);
+    }
+    .form-group textarea { min-height: 110px; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: #a0998f; padding: 60px 24px 24px; }
+    .footer-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 48px;
+    }
+    .footer-brand .logo-name { color: var(--white); font-size: 1.3rem; }
+    .footer-brand .logo-tag  { color: var(--gold); }
+    .footer-brand p { color: #888; font-size: .88rem; margin-top: 16px; max-width: 280px; }
+    .footer-contact { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .footer-contact a { color: #aaa; text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .footer-col h4 {
+      color: var(--white); font-weight: 600; font-size: .9rem;
+      margin-bottom: 16px; letter-spacing: .04em;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { color: #888; text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: .8rem; }
+    .footer-seo { font-size: .78rem; color: #666; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 60px; height: 60px;
+      background: #25D366; border-radius: 50%;
+      display: grid; place-items: center;
+      box-shadow: 0 6px 30px rgba(37,211,102,.45);
+      text-decoration: none; font-size: 1.7rem;
+      animation: wa-pulse 2.5s infinite;
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    @keyframes wa-pulse {
+      0%,100%{ box-shadow: 0 6px 30px rgba(37,211,102,.45); }
+      50%    { box-shadow: 0 6px 40px rgba(37,211,102,.7); }
+    }
+    .wa-tooltip {
+      position: fixed; bottom: 38px; right: 100px;
+      background: var(--ink); color: var(--white);
+      font-size: .8rem; padding: 8px 14px; border-radius: 6px;
+      white-space: nowrap; z-index: 999;
+      opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .wa-float:hover ~ .wa-tooltip { opacity: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .about-inner { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+    }
+    @media(max-width:640px) {
+      .nav-links { display: none; }
+      .nav-cta   { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .testi-grid    { grid-template-columns: 1fr; }
+      .why-grid      { grid-template-columns: 1fr 1fr; }
+      .footer-inner  { grid-template-columns: 1fr; gap: 32px; }
+      .form-row      { grid-template-columns: 1fr; }
+      .hero-stats    { flex-wrap: wrap; gap: 24px; }
+      .about-badge   { position: static; margin-top: 24px; display: inline-block; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(30px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    .hero-content > * {
+      animation: fadeUp .7s ease both;
+    }
+    .hero-content > *:nth-child(1){ animation-delay:.1s }
+    .hero-content > *:nth-child(2){ animation-delay:.2s }
+    .hero-content > *:nth-child(3){ animation-delay:.3s }
+    .hero-content > *:nth-child(4){ animation-delay:.4s }
+    .hero-content > *:nth-child(5){ animation-delay:.5s }
+    /* ── SERVICE CATEGORY HEADINGS ── */
+    .service-category-heading {
+      grid-column: 1 / -1;
+      padding: 18px 28px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--deep) 0%, #252a38 100%);
+      border-left: 5px solid var(--gold);
+      display: flex; align-items: center;
+      margin-top: 20px;
+    }
+    .service-category-heading:first-child { margin-top: 0; }
+    .service-category-heading--offset {
+      background: linear-gradient(135deg, #1a1d24 0%, #2a1f0a 100%);
+      border-left-color: var(--gold-lt);
+    }
+    .category-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--gold-lt); letter-spacing: .04em;
+    }
+    .service-card--offset {
+      background: linear-gradient(135deg, #fffbf2, #fff8e8);
+      border-color: rgba(201,149,42,.35);
+    }
+    .service-card--offset::before { background: var(--gold); }
+
+    /* Premium coloured service icons */
+    .service-card:nth-child(3) .service-icon { background: rgba(79,70,229,.12); }
+    .service-card:nth-child(4) .service-icon { background: rgba(13,148,136,.12); }
+    .service-card:nth-child(5) .service-icon { background: rgba(225,29,72,.12); }
+    .service-card:nth-child(6) .service-icon { background: rgba(124,58,237,.12); }
+    .service-card:nth-child(7) .service-icon { background: rgba(5,150,105,.12); }
+    .service-card:nth-child(8) .service-icon { background: rgba(201,149,42,.12); }
+    .service-card:nth-child(9) .service-icon { background: rgba(79,70,229,.12); }
+    .service-card:nth-child(10) .service-icon { background: rgba(13,148,136,.12); }
+
+    /* Premium section-label colour variants */
+    .services .section-label { color: var(--royal-lt); }
+    .why-us .section-label   { color: var(--teal); }
+    .testimonials .section-label { color: var(--rose); }
+
+    /* Premium hero badge */
+    .hero-badge { background: rgba(79,70,229,.18); border-color: rgba(130,140,248,.4); color: var(--royal-lt); }
+
+    /* Premium trust bar icons */
+    .trust-icon { filter: drop-shadow(0 0 4px rgba(201,149,42,.4)); }
+
+    /* ── BLANK / EMPTY TESTIMONIAL CARDS ── */
+    .testi-empty {
+      border: 2px dashed rgba(201,149,42,.3);
+      background: linear-gradient(135deg, #fafaf7, #f7f3ec);
+      position: relative;
+    }
+    .testi-empty::after {
+      content: '✦ Awaiting your review';
+      position: absolute; top: 14px; right: 18px;
+      font-size: .7rem; font-weight: 600;
+      color: var(--gold); letter-spacing: .1em; text-transform: uppercase;
+    }
+    .testi-placeholder {
+      color: #b0a898 !important;
+      font-style: italic !important;
+      font-size: .88rem !important;
+    }
+    .testi-stars { color: #d0cbc4 !important; }
+    .testi-avatar-empty {
+      background: linear-gradient(135deg, var(--warm), #ddd8cc) !important;
+      color: #a09890 !important;
+    }
+    .testi-name-empty { color: #bbb5ad !important; font-style: italic; }
+    .testi-role-empty { color: #ccc7bf !important; font-style: italic; }
+
+    /* Premium why-card colour accents */
+    .why-card:nth-child(1) .why-icon { color: var(--royal); }
+    .why-card:nth-child(2) .why-icon { color: var(--teal); }
+    .why-card:nth-child(3) .why-icon { color: var(--emerald); }
+    .why-card:nth-child(4) .why-icon { color: var(--gold); }
+
+    /* Premium gradient CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #b8820f 0%, var(--gold) 40%, #e8b84b 100%);
+    }
+
+    /* Footer accent */
+    footer { border-top: 3px solid var(--gold); }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home">
+      <div class="logo-mark">IE</div>
+      <div class="logo-text">
+        <div class="logo-name">Indira Enterprises</div>
+        <div class="logo-tag">Premium Printing · Bengaluru</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:9449444412" class="btn btn-gold nav-cta">📞 Call Now</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mob-menu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="tel:9449444412" style="color:var(--gold);margin-top:10px">📞 9449444412</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-accent"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">⭐ Bengaluru's Trusted Printing Partner</div>
+      <h1>Where Every Print<br/>Tells Your <em>Brand Story</em></h1>
+      <p class="hero-sub">Premium visiting card, offset, and digital printing services crafted for businesses that refuse to compromise on quality. Serving Bengaluru since the beginning.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-gold">Get a Free Quote →</a>
+        <a href="https://wa.me/919449444412?text=Hi%2C%20I%27m%20interested%20in%20your%20printing%20services" target="_blank" class="btn btn-wa">💬 WhatsApp Us</a>
+        <a href="tel:9449444412" class="btn btn-outline">📞 9449444412</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div>
+          <div class="stat-num">13+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">9+</div>
+          <div class="stat-label">Print Services</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="card-mock">
+        <div class="card-mock-logo">Indira Enterprises</div>
+        <div class="card-mock-name">L Pranesh Kumar</div>
+        <div class="card-mock-role">Director</div>
+        <div class="card-mock-divider"></div>
+        <div class="card-mock-info">
+          📞 +91 9449444412<br/>
+          🌐 www.indiraenterprises.com<br/>
+          📍 1st Floor, 39, 2nd Cross, Nethaji Nagar,<br/>K.P Agrahara, Bengaluru Urban,<br/>Karnataka - 560023
+        </div>
+      </div>
+      <div class="print-strip">
+        <div class="print-dot"></div>
+        <div class="print-text"><strong>Now printing:</strong> 500 visiting cards for a corporate client</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TRUST BAR ═══════════════════ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">✅</span> Premium Quality Paper</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Fast Turnaround</div>
+    <div class="trust-item"><span class="trust-icon">💰</span> Competitive Pricing</div>
+    <div class="trust-item"><span class="trust-icon">🎨</span> Custom Design Support</div>
+    <div class="trust-item"><span class="trust-icon">🚚</span> Doorstep Delivery</div>
+  </div>
+</div>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Printing Solutions for Every Business Need</h2>
+      <p class="section-sub">From a crisp visiting card that makes a first impression, to large-run offset jobs and vibrant digital prints — we do it all with precision.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- ── DIGITAL PRINTING CATEGORY ── -->
+      <div class="service-category-heading">
+        <span class="category-label">🖥️ Digital Printing</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🪪</div>
+        <h3>Visiting Cards</h3>
+        <p>Your visiting card is often the first impression of your brand. We craft cards that are remembered, not discarded.</p>
+        <ul class="service-features">
+          <li>Premium matte, gloss & soft-touch finishes</li>
+          <li>Single & double-sided printing</li>
+          <li>UV coating & spot lamination</li>
+          <li>Custom die cuts & rounded corners</li>
+          <li>Min. 100 cards, bulk discounts available</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>Brochures & Flyers</h3>
+        <p>Professionally designed brochures and flyers that communicate your message clearly and leave a lasting impact.</p>
+        <ul class="service-features">
+          <li>Bi-fold, tri-fold & z-fold options</li>
+          <li>A4, A5, DL & custom sizes</li>
+          <li>Gloss, matte & silk lamination</li>
+          <li>Full colour CMYK printing</li>
+          <li>Bulk order discounts available</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🖼️</div>
+        <h3>Posters & Banners</h3>
+        <p>Eye-catching posters and banners for events, promotions, and brand visibility — printed in vibrant, bold colours.</p>
+        <ul class="service-features">
+          <li>Indoor & outdoor banner printing</li>
+          <li>Roll-up, flex & vinyl banners</li>
+          <li>Custom sizes up to large format</li>
+          <li>Weather-resistant materials available</li>
+          <li>Same-day options for urgent jobs</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💌</div>
+        <h3>Wedding & Invitation Cards</h3>
+        <p>Elegant, personalised wedding and invitation cards that set the tone for your special celebrations.</p>
+        <ul class="service-features">
+          <li>Luxury paper & card stock options</li>
+          <li>Foil stamping & embossing</li>
+          <li>Custom shapes & sizes</li>
+          <li>Envelopes & inserts available</li>
+          <li>Design assistance provided</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏷️</div>
+        <h3>Stickers & Labels</h3>
+        <p>Durable, high-quality stickers and labels for products, packaging, branding, and promotional use.</p>
+        <ul class="service-features">
+          <li>Vinyl, paper & clear sticker options</li>
+          <li>Custom shapes & die-cutting</li>
+          <li>Waterproof & UV-resistant options</li>
+          <li>Roll labels for product packaging</li>
+          <li>Any quantity from small to bulk</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Bill Books & Letterheads</h3>
+        <p>Professional bill books and branded letterheads that give your business a polished, credible identity.</p>
+        <ul class="service-features">
+          <li>Single & duplicate bill books</li>
+          <li>Sequential numbering available</li>
+          <li>Custom branded letterheads</li>
+          <li>Multiple paper weights & sizes</li>
+          <li>Carbon copy options available</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🪙</div>
+        <h3>ID Cards</h3>
+        <p>Sturdy, professional ID cards for employees, students, and events — printed with precision and clarity.</p>
+        <ul class="service-features">
+          <li>PVC & paper ID card printing</li>
+          <li>Photo ID with barcodes & QR codes</li>
+          <li>Lanyard slot punching available</li>
+          <li>Bulk printing for organisations</li>
+          <li>Lamination for long-lasting durability</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📚</div>
+        <h3>Book & Document Printing</h3>
+        <p>High-quality printing for books, manuals, reports, and documents — from small runs to large volumes.</p>
+        <ul class="service-features">
+          <li>Perfect binding & saddle-stitching</li>
+          <li>Black & white and full colour printing</li>
+          <li>Custom page sizes & orientations</li>
+          <li>Thick cover stock options</li>
+          <li>Suitable for academic & corporate use</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Binding & Lamination</h3>
+        <p>Finishing services that protect and enhance your printed materials — giving them a professional, premium look.</p>
+        <ul class="service-features">
+          <li>Spiral, comb & perfect binding</li>
+          <li>Gloss, matte & thermal lamination</li>
+          <li>Single & double-sided lamination</li>
+          <li>Hardcover & softcover binding</li>
+          <li>Same-day finishing for urgent jobs</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+      <!-- ── OFFSET PRINTING CATEGORY ── -->
+      <div class="service-category-heading service-category-heading--offset">
+        <span class="category-label">🖨️ Offset Printing</span>
+      </div>
+
+      <div class="service-card service-card--offset">
+        <div class="service-icon">🖨️</div>
+        <h3>Offset Printing</h3>
+        <p>Industry-standard offset printing for sharp, consistent, large-volume jobs — brochures, catalogues, stationery & more.</p>
+        <ul class="service-features">
+          <li>High-volume production at low cost per unit</li>
+          <li>CMYK & Pantone colour accuracy</li>
+          <li>Brochures, flyers, letterheads, catalogues</li>
+          <li>Multiple paper weights & stock options</li>
+          <li>Ideal for 1,000+ print runs</li>
+        </ul>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-img-box">
+        <div class="about-quote">
+          "Ink is more than colour — it is the voice of your <span>brand</span>, pressed into paper."
+        </div>
+        <div class="about-meta">— Indira Enterprises, Bengaluru</div>
+      </div>
+      <div class="about-badge">
+        <span class="badge-num">13+</span>
+        <span class="badge-txt">Years of Excellence</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <span class="section-label">About Us</span>
+      <h2 class="section-title">Bengaluru's Reliable Printing Partner</h2>
+      <p>Indira Enterprises was founded with a single mission: to give every business — big or small — access to world-class print quality at honest prices. Based in the heart of Bengaluru, we have been serving clients with pride since <strong>2012</strong> — building trust with hundreds of corporate clients across Karnataka.</p>
+      <p>We invest in state-of-the-art printing machinery and premium paper stocks, ensuring every order leaves our press looking impeccable. Our team of experienced designers and print specialists works closely with each client to understand their brand identity and deliver results that exceed expectations.</p>
+      <p>Whether you are a start-up looking for your first batch of visiting cards or an established corporation ordering quarterly catalogue runs, we treat every job with the same care and attention to detail.</p>
+
+      <div class="about-values">
+        <div class="value-item">
+          <div class="value-icon">🏆</div>
+          <div class="value-title">Quality First</div>
+          <div class="value-desc">We never compromise on materials or print precision.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">⏱️</div>
+          <div class="value-title">On-Time Delivery</div>
+          <div class="value-desc">Your deadlines are our deadlines. Always.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">💬</div>
+          <div class="value-title">Client-Centric</div>
+          <div class="value-desc">We listen, advise, and adapt to your needs.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">💡</div>
+          <div class="value-title">Design Expertise</div>
+          <div class="value-desc">Need a design? Our team can create it for you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WHY US ═══════════════════ -->
+<section class="why-us">
+  <div class="why-inner">
+    <div class="why-header">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The Indira Enterprises Difference</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Colour Accuracy</h3>
+        <p>Pantone-matched and CMYK-calibrated prints that faithfully represent your brand colours every single time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📦</div>
+        <h3>Doorstep Delivery</h3>
+        <p>We deliver across Bengaluru. Bulk orders are handled with professional packaging to prevent any damage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <h3>Responsive Support</h3>
+        <p>Chat with us on WhatsApp or call us anytime. We respond fast and keep you updated at every stage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💸</div>
+        <h3>Fair Pricing</h3>
+        <p>Transparent quotes with no hidden charges. Volume discounts for regular and bulk-order clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testi-header">
+      <span class="section-label">Client Reviews</span>
+      <h2 class="section-title">Trusted by Businesses Across Bengaluru</h2>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card testi-empty">
+        <div class="quote-mark">"</div>
+        <div class="testi-stars">☆☆☆☆☆</div>
+        <p class="testi-text testi-placeholder">Your review goes here. We'd love to hear about your experience with Indira Enterprises!</p>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar-empty">?</div>
+          <div>
+            <div class="testi-name testi-name-empty">Your Name</div>
+            <div class="testi-role testi-role-empty">Your Business · Your Location</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card testi-empty">
+        <div class="quote-mark">"</div>
+        <div class="testi-stars">☆☆☆☆☆</div>
+        <p class="testi-text testi-placeholder">Your review goes here. We'd love to hear about your experience with Indira Enterprises!</p>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar-empty">?</div>
+          <div>
+            <div class="testi-name testi-name-empty">Your Name</div>
+            <div class="testi-role testi-role-empty">Your Business · Your Location</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card testi-empty">
+        <div class="quote-mark">"</div>
+        <div class="testi-stars">☆☆☆☆☆</div>
+        <p class="testi-text testi-placeholder">Your review goes here. We'd love to hear about your experience with Indira Enterprises!</p>
+        <div class="testi-author">
+          <div class="testi-avatar testi-avatar-empty">?</div>
+          <div>
+            <div class="testi-name testi-name-empty">Your Name</div>
+            <div class="testi-role testi-role-empty">Your Business · Your Location</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+<section class="cta-banner">
+  <h2>Ready to Make a Lasting Impression?</h2>
+  <p>Get a free, no-obligation quote for your print requirements today. Quick response guaranteed.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="btn btn-white">📋 Request a Quote</a>
+    <a href="https://wa.me/919449444412?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20printing%20services" target="_blank" class="btn btn-dark">💬 WhatsApp Now</a>
+    <a href="tel:9449444412" class="btn btn-dark">📞 Call 9449444412</a>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Let's Discuss Your Print Project</h2>
+      <p>Send us your requirements and we'll get back to you with a competitive quote within a few hours. You can also reach us directly — we love talking print!</p>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-item-text">
+            <div class="contact-item-label">Phone</div>
+            <a href="tel:9449444412">9449444412</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-item-text">
+            <div class="contact-item-label">Email</div>
+            <a href="/cdn-cgi/l/email-protection#a0c9cec4c9d2c18ed0c9ced4c9d0d0c1c3cbd3e0c7cdc1c9cc8ec3cfcd"><span class="__cf_email__" data-cfemail="caa3a4aea3b8abe4baa3a4bea3babaaba9a1b98aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-item-text">
+            <div class="contact-item-label">Location</div>
+            <span>1st Floor, 39, 2nd Cross, Nethaji Nagar, K.P Agrahara, Bengaluru Urban, Karnataka - 560023</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div class="contact-item-text">
+            <div class="contact-item-label">WhatsApp</div>
+            <a href="https://wa.me/919449444412" target="_blank">Chat with us on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/919449444412?text=Hi%20Indira%20Enterprises%2C%20I%20need%20a%20quote%20for%20printing" target="_blank" class="btn btn-wa" style="margin-top:8px">
+        💬 Start WhatsApp Chat
+      </a>
+    </div>
+
+    <div class="contact-form">
+      <h3>Request a Free Quote</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" placeholder="Rajesh Kumar" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+91 98765 43210" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@company.com" />
+      </div>
+      <div class="form-group">
+        <label>Service Required *</label>
+        <select required>
+          <option value="">Select a service…</option>
+          <option>Visiting Cards</option>
+          <option>Brochures & Flyers</option>
+          <option>Posters & Banners</option>
+          <option>Wedding & Invitation Cards</option>
+          <option>Stickers & Labels</option>
+          <option>Bill Books & Letterheads</option>
+          <option>ID Cards</option>
+          <option>Book & Document Printing</option>
+          <option>Binding & Lamination</option>
+          <option>Multiple Services</option>
+          <option>Not sure – need advice</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell us about your requirement</label>
+        <textarea placeholder="E.g. 500 double-sided visiting cards, matte finish, need by Friday…"></textarea>
+      </div>
+      <button type="button" class="btn btn-gold" style="width:100%;justify-content:center" onclick="submitForm()">
+        Send Enquiry →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:4px">
+        <div class="logo-mark">IE</div>
+        <div class="logo-text">
+          <div class="logo-name">Indira Enterprises</div>
+          <div class="logo-tag">Printed to Perfection</div>
+        </div>
+      </div>
+      <p>Premium printing services in Bengaluru — visiting cards, offset printing, and digital printing for businesses that value quality and reliability.</p>
+      <div class="footer-contact">
+        <a href="tel:9449444412">📞 9449444412</a>
+        <a href="/cdn-cgi/l/email-protection#9af3f4fef3e8fbb4eaf3f4eef3eaeafbf9f1e9dafdf7fbf3f6b4f9f5f7">✉ <span class="__cf_email__" data-cfemail="61080f050813004f11080f1508111100020a1221060c00080d4f020e0c">[email&#160;protected]</span></a>
+        <span style="font-size:.85rem;color:#666">📍 1st Floor, 39, 2nd Cross, Nethaji Nagar, K.P Agrahara, Bengaluru - 560023</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Visiting Cards</a></li>
+        <li><a href="#services">Brochures & Flyers</a></li>
+        <li><a href="#services">Posters & Banners</a></li>
+        <li><a href="#services">Wedding & Invitation Cards</a></li>
+        <li><a href="#services">Stickers & Labels</a></li>
+        <li><a href="#services">Bill Books & Letterheads</a></li>
+        <li><a href="#services">ID Cards</a></li>
+        <li><a href="#services">Book & Document Printing</a></li>
+        <li><a href="#services">Binding & Lamination</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:9449444412">Call Now</a></li>
+        <li><a href="https://wa.me/919449444412" target="_blank">WhatsApp Chat</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#f29b9c969b8093dc829b9c869b828293919981b2959f939b9edc919d9f">Send Email</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2012–2026 Indira Enterprises, Bengaluru. All rights reserved.</p>
+    <p class="footer-seo">Printing Services in Bengaluru | Visiting Card Printing | Offset Printing | Digital Printing</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════ WHATSAPP FLOAT ═══════════════════ -->
+<a class="wa-float" href="https://wa.me/919449444412?text=Hi%20Indira%20Enterprises%2C%20I%27d%20like%20to%20know%20more%20about%20your%20printing%20services" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+<div class="wa-tooltip">Chat with us on WhatsApp!</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function toggleMenu() {
+    document.getElementById('mob-menu').classList.toggle('open');
+  }
